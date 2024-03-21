@@ -21,7 +21,10 @@
         "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos.",
         "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos."
       },
-      "bundleIdentifier": "com.leodoca.restaurante"
+      "bundleIdentifier": "com.leodoca.restaurante",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAOmVj0IRAcA8SmWKH7k6WztdDHkpZ6I4E"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -36,7 +39,12 @@
         "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.ACCESS_MEDIA_LOCATION"
       ],
-      "package": "com.leodoca.restaurante"
+      "package": "com.leodoca.restaurante",
+      "config": {
+        "googleMaps": {
+          "apiKey":"AIzaSyB84g5eVPzwaBTYe2IuxtPYcxM9uvFB4YM"        
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

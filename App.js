@@ -5,6 +5,6 @@ import Notification from './src/modules/notifications/Notification';
 
 export default function App() {
   return (
-   <Notification />
+   <Navigation />
   );
 }

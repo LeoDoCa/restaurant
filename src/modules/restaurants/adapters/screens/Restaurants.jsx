@@ -4,7 +4,7 @@ import { getDocs, collection, getFirestore } from "firebase/firestore";
 import FlatListRestaurant from "./components/FlatListRestaurant";
 import Loading from "./../../../../kernel/components/Loading"
 
-export default function Restaurants() {
+export default function Restaurants(props) {
   /*const restaurants = [
     {
       uid: 1,
@@ -24,6 +24,7 @@ export default function Restaurants() {
     },
   ];*/
 
+  const {navigation} = props;
   const db = getFirestore();
   const [restaurants, setRestaurants] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,8 @@ export default function Restaurants() {
             description: doc.data()["description"],
             rating: doc.data()["rating"],
             image: doc.data()["image"],
+            latitude: doc.data()["latitude"],
+            longitude: doc.data()["longitude"]
           });
           setRestaurants(arrayRestaurants);
         });
@@ -62,6 +65,7 @@ export default function Restaurants() {
             title={item.title}
             description={item.description}
             rating={item.rating}
+            action={()=>navigation.navigate("RestaurantDetail", item)}
           />
         }
         keyExtractor={item => item.uid.toString()}
