@@ -18,8 +18,10 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Se necesita acceso a la cámara para tomar fotos",
-        "NSPhotoLibraryUsageDescription": "Se necesita acceso a la biblioteca de fotos para seleccionar una imagen de perfil"
-      }
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos.",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos."
+      },
+      "bundleIdentifier": "com.leodoca.restaurante"
     },
     "android": {
       "adaptiveIcon": {
@@ -29,8 +31,12 @@
       "permissions": [
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
-      ]
+        "WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION"
+      ],
+      "package": "com.leodoca.restaurante"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -44,6 +50,17 @@
           "isAccessMediaLocationEnabled": true
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "20710f27-cf1e-4107-a64a-4fefe8de92fa"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/20710f27-cf1e-4107-a64a-4fefe8de92fa"
+    }
   }
 }
